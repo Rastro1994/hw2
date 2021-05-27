@@ -14,5 +14,4 @@ import static com.codeborne.selenide.Selenide.*;
             $("#column-a").dragAndDropTo("#column-b");
             $$(".column").get(0).should(text("B"));
         }
-
     }

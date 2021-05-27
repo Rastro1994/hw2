@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
@@ -14,7 +15,7 @@ public class Github {
         $("[href='/selenide/selenide']").click();
         $(byText("Wiki")).click();
         $(withText("Show 1 more pages")).click();
-        $(byText("SoftAssertions")).should(visible).click();
-        $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:")/ancestor::ol/following-sibling::div[1]").should(visible);
+        $(byText("SoftAssertions")).click();
+        $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
     }
 }
